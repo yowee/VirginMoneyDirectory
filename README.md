@@ -34,8 +34,8 @@ Mockito
 Firebase
 
 # API
-https://61e947967bc0550017bc61bf.mockapi.io/api/v1/rooms
-https://61e947967bc0550017bc61bf.mockapi.io/api/v1/people
+Rooms: https://61e947967bc0550017bc61bf.mockapi.io/api/v1/rooms
+People: https://61e947967bc0550017bc61bf.mockapi.io/api/v1/people
 
 # Usage
 Clone The project and run 
