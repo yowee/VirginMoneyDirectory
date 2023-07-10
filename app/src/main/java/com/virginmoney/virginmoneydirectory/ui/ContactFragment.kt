@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.virginmoney.virginmoneydirectory.R
-import com.virginmoney.virginmoneydirectory.data.ContactViewModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModelItemModel
 import com.virginmoney.virginmoneydirectory.databinding.FragmentContactBinding

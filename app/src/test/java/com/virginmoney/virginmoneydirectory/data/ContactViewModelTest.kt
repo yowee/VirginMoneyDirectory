@@ -1,16 +1,13 @@
 package com.virginmoney.virginmoneydirectory.data
 
-import org.junit.Assert.*
-
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
-import com.virginmoney.virginmoneydirectory.data.ContactViewModel
+import com.virginmoney.virginmoneydirectory.ui.ContactViewModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModelItemModel
 import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.setMain

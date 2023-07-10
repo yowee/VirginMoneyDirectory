@@ -1,12 +1,9 @@
 package com.virginmoney.virginmoneydirectory.data
 
-import org.junit.Assert.*
-
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
-import com.virginmoney.virginmoneydirectory.TestUtil
 import com.virginmoney.virginmoneydirectory.TestUtil.Companion.getDummyRoomModel
-import com.virginmoney.virginmoneydirectory.data.RoomViewModel
+import com.virginmoney.virginmoneydirectory.ui.RoomViewModel
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
 import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
 import kotlinx.coroutines.Dispatchers

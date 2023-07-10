@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.virginmoney.virginmoneydirectory.data.RoomViewModel
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
 import com.virginmoney.virginmoneydirectory.databinding.FragmentRoomBinding
 import dagger.hilt.android.AndroidEntryPoint
