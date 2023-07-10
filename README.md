@@ -12,7 +12,7 @@
 #RoomsPage
 ![roomPage](https://github.com/yowee/VirginMoneyDirectory/assets/14086636/98b2588c-c33d-45a7-81c0-f4101f54d7e0)
 
-
+<img src="https://github.com/yowee/VirginMoneyDirectory/assets/14086636/98b2588c-c33d-45a7-81c0-f4101f54d7e0" width="128"/>
 
 
 
