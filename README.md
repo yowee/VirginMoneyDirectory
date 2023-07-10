@@ -1,4 +1,5 @@
-# VirginMoneyDirectory
+# Virgin Money Directory Android App 👋🏾
+
 
 <img src="https://github.com/yowee/VirginMoneyDirectory/assets/14086636/1a6a33e8-7a5a-4212-9201-b45830b6b082" width="480"/>
 <img src="https://github.com/yowee/VirginMoneyDirectory/assets/14086636/fcd49a5d-cf90-4901-ad9b-676a68d3d2b4" width="480"/>
@@ -7,14 +8,34 @@
 
 
 
-#Architecture 
-MVVM
-#Libraries 
+# Requirment
+JavaVersion VERSION_17
+Minimum SDk 19 
+IDE(Android Studio)
+
+
+
+# Features
+Signnup with Email and password
+SignIn with Email and password
+Social Login(Facebook and Google)
+
+# Architecture **"MVVM"**
+Dipendency Injection
+Repository
+ViewModel
+
+# Libraries 
 Retorfit
 HILT
 Glide
 Gson
 Mockito
+Firebase
 
+# API
+https://61e947967bc0550017bc61bf.mockapi.io/api/v1/rooms
+https://61e947967bc0550017bc61bf.mockapi.io/api/v1/people
 
-
+# Usage
+Clone The project and and run 
