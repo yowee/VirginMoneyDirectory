@@ -1,8 +1,8 @@
 package com.virginmoney.virginmoneydirectory.di
 
 
-import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
-import com.virginmoney.virginmoneydirectory.data.model.repository.RepositoryImpl
+import com.virginmoney.virginmoneydirectory.data.repository.Repository
+import com.virginmoney.virginmoneydirectory.data.repository.RepositoryImpl
 import com.virginmoney.virginmoneydirectory.data.remote.APICall
 import com.virginmoney.virginmoneydirectory.data.remote.ApiDetails
 import dagger.Module

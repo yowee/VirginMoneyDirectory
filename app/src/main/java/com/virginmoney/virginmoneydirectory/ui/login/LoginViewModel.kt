@@ -1,9 +1,7 @@
 package com.virginmoney.virginmoneydirectory.ui.login
 
-import android.content.Context
 import android.util.Log
 import android.util.Patterns
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,9 +15,8 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.virginmoney.virginmoneydirectory.R
-import com.virginmoney.virginmoneydirectory.data.LoginRepository
+import com.virginmoney.virginmoneydirectory.data.repository.LoginRepository
 import com.virginmoney.virginmoneydirectory.data.Result
-import com.virginmoney.virginmoneydirectory.data.model.LoggedInUser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.virginmoney.virginmoneydirectory.ui.ContactViewModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModelItemModel
-import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
+import com.virginmoney.virginmoneydirectory.data.repository.Repository
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking

@@ -3,7 +3,7 @@ package com.virginmoney.virginmoneydirectory.ui.login
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.virginmoney.virginmoneydirectory.data.LoginDataSource
-import com.virginmoney.virginmoneydirectory.data.LoginRepository
+import com.virginmoney.virginmoneydirectory.data.repository.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

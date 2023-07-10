@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.virginmoney.virginmoneydirectory.TestUtil.Companion.getDummyRoomModel
 import com.virginmoney.virginmoneydirectory.ui.RoomViewModel
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
-import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
+import com.virginmoney.virginmoneydirectory.data.repository.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking

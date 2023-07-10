@@ -7,6 +7,8 @@ import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModelItemM
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModelItemModel
 import com.virginmoney.virginmoneydirectory.data.remote.APICall
+import com.virginmoney.virginmoneydirectory.data.repository.Repository
+import com.virginmoney.virginmoneydirectory.data.repository.RepositoryImpl
 import org.junit.Assert.*
 
 

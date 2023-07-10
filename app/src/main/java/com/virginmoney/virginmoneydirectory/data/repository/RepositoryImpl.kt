@@ -1,4 +1,4 @@
-package com.virginmoney.virginmoneydirectory.data.model.repository
+package com.virginmoney.virginmoneydirectory.data.repository
 
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
 import com.virginmoney.virginmoneydirectory.data.remote.APICall

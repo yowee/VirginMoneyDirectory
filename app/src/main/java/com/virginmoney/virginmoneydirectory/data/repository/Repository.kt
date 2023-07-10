@@ -1,4 +1,4 @@
-package com.virginmoney.virginmoneydirectory.data.model.repository
+package com.virginmoney.virginmoneydirectory.data.repository
 
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel

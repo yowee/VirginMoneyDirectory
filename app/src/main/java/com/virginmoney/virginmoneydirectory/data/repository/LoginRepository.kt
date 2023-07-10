@@ -1,5 +1,7 @@
-package com.virginmoney.virginmoneydirectory.data
+package com.virginmoney.virginmoneydirectory.data.repository
 
+import com.virginmoney.virginmoneydirectory.data.LoginDataSource
+import com.virginmoney.virginmoneydirectory.data.Result
 import com.virginmoney.virginmoneydirectory.data.model.LoggedInUser
 
 /**

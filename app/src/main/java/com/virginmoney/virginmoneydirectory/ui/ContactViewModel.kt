@@ -3,7 +3,7 @@ package com.virginmoney.virginmoneydirectory.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
-import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
+import com.virginmoney.virginmoneydirectory.data.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
