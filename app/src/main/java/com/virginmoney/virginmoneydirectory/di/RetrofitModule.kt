@@ -1,4 +1,4 @@
-package com.virginmoney.virginmoneydirectory.data.di
+package com.virginmoney.virginmoneydirectory.di
 
 
 import com.virginmoney.virginmoneydirectory.data.model.repository.Repository
