@@ -6,12 +6,21 @@
     app:startDestination="@id/navigation_contact">
     <fragment
         android:id="@+id/navigation_contact"
-        android:name="com.virginmoney.virginmoneydirectory.ui.ContactFragment"
-        android:label="fragment_contact"
-        tools:layout="@layout/fragment_contact" />
+        android:name="com.virginmoney.virginmoneydirectory.ui.contact.ContactFragment"
+        android:label="People"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/contact_to_details"
+            app:destination="@id/contactDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_room"
-        android:name="com.virginmoney.virginmoneydirectory.ui.RoomFragment"
-        android:label="fragment_room"
+        android:name="com.virginmoney.virginmoneydirectory.ui.room.RoomFragment"
+        android:label="Room"
         tools:layout="@layout/fragment_room" />
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="com.virginmoney.virginmoneydirectory.ui.contact.ContactDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_contact_detail2" />
 </navigation>

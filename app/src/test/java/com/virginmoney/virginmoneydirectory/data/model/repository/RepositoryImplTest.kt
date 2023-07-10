@@ -3,9 +3,7 @@ package com.virginmoney.virginmoneydirectory.data.model.repository
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.virginmoney.virginmoneydirectory.TestUtil
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
-import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModelItemModel
 import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
-import com.virginmoney.virginmoneydirectory.data.model.room.RoomModelItemModel
 import com.virginmoney.virginmoneydirectory.data.remote.APICall
 import com.virginmoney.virginmoneydirectory.data.repository.Repository
 import com.virginmoney.virginmoneydirectory.data.repository.RepositoryImpl
@@ -14,7 +12,9 @@ import org.junit.Assert.*
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
@@ -33,7 +33,7 @@ class RepositoryImplTest {
     @Mock
     lateinit var apiCall: APICall
 
-    private val testDispatcher = TestCoroutineDispatcher()
+    private val standardDispatcher = StandardTestDispatcher()
 
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
@@ -45,7 +45,7 @@ class RepositoryImplTest {
     }
 
     @Test
-    fun `verify getContacts() function returns expected contact model`() = runBlocking {
+    fun `verify getContacts() function returns expected contact model`() = runTest{
         // Given
         val expectedContactModel = ContactModel()
         expectedContactModel.add(TestUtil.getDummyContactModel())
@@ -53,6 +53,8 @@ class RepositoryImplTest {
 
         // When
         val actualContactModel = repository.getContacts()
+        standardDispatcher.scheduler.advanceUntilIdle()
+
 
         // Then
         assertEquals(expectedContactModel, actualContactModel)
@@ -68,6 +70,7 @@ class RepositoryImplTest {
 
         // When
         val actualRoomModel = repository.getRooms()
+        standardDispatcher.scheduler.advanceUntilIdle()
 
         // Then
         assertEquals(expectedRoomModel, actualRoomModel)
@@ -82,6 +85,7 @@ class RepositoryImplTest {
 
         // When
         val actualContactModel = repository.getContacts()
+        standardDispatcher.scheduler.advanceUntilIdle()
 
         // Then
         assertNotNull(actualContactModel)
@@ -96,6 +100,7 @@ class RepositoryImplTest {
 
         // When
         val actualRoomModel = repository.getRooms()
+        standardDispatcher.scheduler.advanceUntilIdle()
 
         // Then
         assertNotNull(actualRoomModel)

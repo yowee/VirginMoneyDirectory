@@ -4,13 +4,20 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#c40202</color>
     <color name="primary_variant">#ff3d20</color>
+    <color name="primary_variant2">#FF6B55</color>
+
     <color name="on_primary">#FFFFFF</color>
     <color name="seconday">#ff6d00</color>
     <color name="on_secondary">#000000</color>
-    <color name="seconday_variant">#ffcc00</color>
+    <color name="seconday_variant">#FFFFEFAD</color>
     <color name="google_color">#4283EA</color>
     <color name="fb_color">#148DE4</color>
     <color name="custom_background">#FF5722</color>
+
+    <color name="room_available">#CAFFB3</color>
+    <color name="room_not_available">#FF8484</color>
+    <color name="item_contact_color">#FFF1F1</color>
+
 
 
 </resources>

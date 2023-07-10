@@ -1,9 +1,10 @@
-package com.virginmoney.virginmoneydirectory.ui
+package com.virginmoney.virginmoneydirectory.ui.room
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
 import com.virginmoney.virginmoneydirectory.data.repository.Repository
+import com.virginmoney.virginmoneydirectory.data.model.room.RoomModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -11,18 +12,18 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ContactViewModel @Inject constructor(val repository : Repository) : ViewModel(){
+class RoomViewModel @Inject constructor(val repository: Repository): ViewModel() {
 
 
-    val contactLiveData: MutableLiveData<ContactModel> by lazy{
-        MutableLiveData<ContactModel>()
+    val roomLiveData: MutableLiveData<RoomModel> by lazy{
+        MutableLiveData<RoomModel>()
     }
     var isLoaded: Boolean = false
 
-    fun getArticleData()  {
+    fun getRoomData() {
         CoroutineScope(Dispatchers.Main).launch {
-            val contacts = repository.getContacts()
-            contactLiveData.postValue(contacts)
+            val roomModel = repository.getRooms()
+            roomLiveData.postValue(roomModel)
             isLoaded = true
         }
     }

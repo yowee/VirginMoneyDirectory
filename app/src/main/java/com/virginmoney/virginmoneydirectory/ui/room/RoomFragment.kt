@@ -1,4 +1,4 @@
-package com.virginmoney.virginmoneydirectory.ui
+package com.virginmoney.virginmoneydirectory.ui.room
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

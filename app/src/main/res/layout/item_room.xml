@@ -9,6 +9,7 @@
     <!-- item_card_view.xml -->
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_room"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp"
@@ -21,21 +22,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="16dp">
 
+<!--            <TextView-->
+<!--                android:id="@+id/createdAtTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="06-07/1998"-->
+<!--                android:textSize="16sp" />-->
             <TextView
-                android:id="@+id/createdAtTextView"
+                android:id="@+id/idTextView"
+                android:text="1"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="06-07/1998"
-                android:textSize="16sp" />
+                android:layout_marginTop="8dp"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/occupiedTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ocuuoied"
+                android:layout_weight="1"
                 android:layout_marginTop="8dp"
                 android:textSize="14sp" />
 
@@ -44,16 +54,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1234"
+                android:layout_weight="1"
                 android:layout_marginTop="8dp"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/idTextView"
-                android:text="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp" />
 
         </LinearLayout>
 

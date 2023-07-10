@@ -1,8 +1,10 @@
-package com.virginmoney.virginmoneydirectory.ui
+package com.virginmoney.virginmoneydirectory.ui.room
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.virginmoney.virginmoneydirectory.R
@@ -17,8 +19,8 @@ import java.util.Locale
 class RoomAdapter(val childFragmentManager: FragmentManager, val roomModel: RoomModel) :
     RecyclerView.Adapter<RoomAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomAdapter.ViewHolder {
-        return RoomAdapter.ViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_room, parent, false),
             childFragmentManager
         )
@@ -39,10 +41,12 @@ class RoomAdapter(val childFragmentManager: FragmentManager, val roomModel: Room
 
         fun updateUI( room : RoomModelItemModel){
             binding.apply {
-                createdAtTextView.text = formatDateString(room.createdAt.toString())
-                occupiedTextView.text = if (room.isOccupied == true) "Occupied" else "Not Occupied"
+//                createdAtTextView.text = formatDateString(room.createdAt.toString())
+                occupiedTextView.text = if (room.isOccupied == true) "Occupied" else "Available"
                 maxOccupancyTextView.text = "MAX "+ room.maxOccupancy.toString()
-                idTextView.text = room.id.toString()
+                idTextView.text = "Room #"+room.id.toString()
+
+                cardViewRoom.setCardBackgroundColor(if (room.isOccupied == true) Color.parseColor("#FF8484") else Color.parseColor("#CAFFB3"))
             }
 
 

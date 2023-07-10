@@ -21,9 +21,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.virginmoney.virginmoneydirectory.MainActivity
+import com.virginmoney.virginmoneydirectory.ui.MainActivity
 import com.virginmoney.virginmoneydirectory.R
-import com.virginmoney.virginmoneydirectory.data.SessionManager
 import com.virginmoney.virginmoneydirectory.databinding.ActivityLoginBinding
 
 
@@ -81,17 +80,11 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
                 updateUiWithUser(loginResult.success)
+                finish()
+                setResult(Activity.RESULT_OK)
                 // Save user session using SessionManager
-                val sessionManager = SessionManager(applicationContext)
-                sessionManager.saveUserSession(
-                    loginResult.success.userid,
-                    loginResult.success.email
-                )
             }
-            setResult(Activity.RESULT_OK)
 
-            //Complete and destroy login activity once successful
-            finish()
         })
 
         email.afterTextChanged {
@@ -196,7 +189,7 @@ class LoginActivity : AppCompatActivity() {
         // TODO : initiate successful logged in experience
         Toast.makeText(
             applicationContext,
-            "$welcome $displayName",
+            "$welcome",
             Toast.LENGTH_LONG
         ).show()
     }
