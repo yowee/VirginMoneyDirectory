@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1096928934851",
+    "project_id": "virginmoneydirectory",
+    "storage_bucket": "virginmoneydirectory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096928934851:android:34c44e610572a9784edb76",
+        "android_client_info": {
+          "package_name": "com.virginmoney.virginmoneydirectory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096928934851-72jh66qc7lo2n38te6en2evqhntak98c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virginmoney.virginmoneydirectory",
+            "certificate_hash": "5898d618b7056fdac64e0254532c600ef6710633"
+          }
+        },
+        {
+          "client_id": "1096928934851-qmmvpmtv4urfotpq80bv22ti25g2rrh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWs6pxhWLam5OdM-WMHKyxx-8WHH8nMHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096928934851-aime995gvu27o93adpm2da5mol9nqqnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
