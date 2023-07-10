@@ -10,27 +10,39 @@
 
 # Requirment
 JavaVersion VERSION_17
+
 Minimum SDk 19 
+
 IDE(Android Studio)
+
 
 
 
 # Features
 Signnup with Email and password
+
 SignIn with Email and password
+
 Social Login(Facebook and Google)
 
 # Architecture **"MVVM"**
 Dipendency Injection
+
 Repository
+
 ViewModel
 
 # Libraries 
 Retorfit
+
 HILT
+
 Glide
+
 Gson
+
 Mockito
+
 Firebase
 
 # API
