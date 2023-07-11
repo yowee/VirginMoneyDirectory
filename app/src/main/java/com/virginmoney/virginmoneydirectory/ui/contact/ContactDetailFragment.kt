@@ -8,19 +8,19 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.virginmoney.virginmoneydirectory.R
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModelItemModel
-import com.virginmoney.virginmoneydirectory.databinding.FragmentContactDetail2Binding
+import com.virginmoney.virginmoneydirectory.databinding.FragmentContactDetailBinding
 
 
 class ContactDetailFragment : Fragment() {
 
 
-    private lateinit var binding: FragmentContactDetail2Binding
+    private lateinit var binding: FragmentContactDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentContactDetail2Binding.inflate(inflater, container, false)
+        binding = FragmentContactDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 

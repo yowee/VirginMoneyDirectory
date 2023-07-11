@@ -133,18 +133,10 @@ class ContactFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sign_out -> {
-                // Handle sign out
-//                val firebaseAuth = FirebaseAuth.getInstance()
-//                firebaseAuth.signOut()
-//                val intent = Intent(requireContext(), LoginActivity::class.java)
-//                startActivity(intent)
-//
-//                Toast.makeText(requireContext(), "Signed out Successfully", Toast.LENGTH_LONG)
-//                requireActivity().finish()
                 val builder = AlertDialog.Builder(requireContext())
                     .setTitle("Logout")
                     .setCancelable(true)
-                    .setMessage("Are you sure to log out?")
+                    .setMessage("Are you sure?")
                     .setPositiveButton("Yes") { qq, q ->
                         FirebaseAuth.getInstance().signOut()
                         LoginManager.getInstance().logOut()
@@ -153,7 +145,7 @@ class ContactFragment : Fragment() {
                         startActivity(intent)
                         requireActivity().finish()
                     }
-                    .setNegativeButton("NOOOOOOO") { qq, q ->
+                    .setNegativeButton("No") { qq, q ->
                     }
                 val dialog = builder.create()
                 dialog.show()

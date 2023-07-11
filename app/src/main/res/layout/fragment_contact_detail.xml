@@ -14,7 +14,7 @@
 
         <ImageView
             android:id="@+id/avatarImageView"
-            android:layout_width="390dp"
+            android:layout_width="match_parent"
             android:src="@drawable/virginmoney"
 
             android:layout_height="280dp"
@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceMedium"
             android:layout_marginTop="23sp"
+            android:textSize="26sp"
             android:textColor="@color/primary"
             tools:text="Name" />
 
