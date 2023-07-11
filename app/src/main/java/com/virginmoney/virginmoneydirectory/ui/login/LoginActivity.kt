@@ -21,6 +21,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.firebase.auth.FirebaseAuth
 import com.virginmoney.virginmoneydirectory.ui.MainActivity
 import com.virginmoney.virginmoneydirectory.R
 import com.virginmoney.virginmoneydirectory.databinding.ActivityLoginBinding
@@ -80,11 +81,10 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
                 updateUiWithUser(loginResult.success)
-                finish()
-                setResult(Activity.RESULT_OK)
                 // Save user session using SessionManager
             }
-
+            setResult(Activity.RESULT_OK)
+            finish()
         })
 
         email.afterTextChanged {
@@ -181,6 +181,16 @@ class LoginActivity : AppCompatActivity() {
 
 
         }
+
+        val firebaseAuth = FirebaseAuth.getInstance()
+
+        if (firebaseAuth.currentUser != null) {
+            // User is already authenticated, navigate to the main screen
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Optional: Close the login activity to prevent going back to it
+        }
+
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
@@ -218,10 +228,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
+
+
     companion object {
         private const val TAG = "LoginActivity"
         private const val RC_SIGN_IN = 9001
     }
+
+
 
 }
 

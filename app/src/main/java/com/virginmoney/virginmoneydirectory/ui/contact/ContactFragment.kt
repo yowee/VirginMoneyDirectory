@@ -1,7 +1,7 @@
-
 package com.virginmoney.virginmoneydirectory.ui.contact
 
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,13 +10,12 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import com.virginmoney.virginmoneydirectory.R
 import com.virginmoney.virginmoneydirectory.data.model.contact.ContactModel
@@ -26,7 +25,7 @@ import com.virginmoney.virginmoneydirectory.ui.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ContactFragment : Fragment(){
+class ContactFragment : Fragment() {
     private lateinit var binding: FragmentContactBinding
     private val viewModel: ContactViewModel by viewModels()
     private lateinit var contactAdapter: ContactAdapter
@@ -85,7 +84,7 @@ class ContactFragment : Fragment(){
     }
 
     private fun setupRecyclerView(contacts: ContactModel) {
-        contactAdapter = ContactAdapter(contacts){ clickedContact ->
+        contactAdapter = ContactAdapter(contacts) { clickedContact ->
             openDetailView(clickedContact)
         }
         binding.rvContacts.apply {
@@ -98,6 +97,7 @@ class ContactFragment : Fragment(){
     private fun loadData(contact: ContactModel) {
         setupRecyclerView(contact)
     }
+
     private fun observeContactData() {
         viewModel.contactLiveData.observe(viewLifecycleOwner) { contactData ->
             contactAdapter.filterList(contactData)
@@ -118,7 +118,10 @@ class ContactFragment : Fragment(){
 
     private fun openDetailView(clickedContact: ContactModelItemModel) {
         val bundle = Bundle().apply {
-            putParcelable("contact", clickedContact) // Pass the selected contact to the DetailFragment
+            putParcelable(
+                "contact",
+                clickedContact
+            ) // Pass the selected contact to the DetailFragment
         }
         findNavController()
             .navigate(
@@ -131,13 +134,29 @@ class ContactFragment : Fragment(){
         when (item.itemId) {
             R.id.sign_out -> {
                 // Handle sign out
-                val firebaseAuth = FirebaseAuth.getInstance()
-                firebaseAuth.signOut()
-                val intent = Intent(requireContext(), LoginActivity::class.java)
-                startActivity(intent)
+//                val firebaseAuth = FirebaseAuth.getInstance()
+//                firebaseAuth.signOut()
+//                val intent = Intent(requireContext(), LoginActivity::class.java)
+//                startActivity(intent)
+//
+//                Toast.makeText(requireContext(), "Signed out Successfully", Toast.LENGTH_LONG)
+//                requireActivity().finish()
+                val builder = AlertDialog.Builder(requireContext())
+                    .setTitle("Logout")
+                    .setCancelable(true)
+                    .setMessage("Are you sure to log out?")
+                    .setPositiveButton("Yes") { qq, q ->
+                        FirebaseAuth.getInstance().signOut()
+                        LoginManager.getInstance().logOut()
 
-                Toast.makeText(requireContext(), "Signed out Successfully", Toast.LENGTH_LONG)
-                requireActivity().finish()
+                        val intent = Intent(requireContext(), LoginActivity::class.java)
+                        startActivity(intent)
+                        requireActivity().finish()
+                    }
+                    .setNegativeButton("NOOOOOOO") { qq, q ->
+                    }
+                val dialog = builder.create()
+                dialog.show()
                 return true
             }
             // Handle other menu items if needed
